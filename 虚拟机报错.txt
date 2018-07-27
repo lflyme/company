@@ -1,0 +1,46 @@
+ERROR	rabbitvcs.services.checkerservice	org.freedesktop.DBus.Python.rabbitvcs.vcs.git.gittyup.exceptions.NotRepositoryError: Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/dbus/service.py", line 707, in _message_cb
+    retval = candidate_method(self, *args, **keywords)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/services/checkerservice.py", line 184, in GenerateMenuConditions
+    path_dict = self.status_checker.generate_menu_conditions(upaths)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/services/statuschecker.py", line 56, in generate_menu_conditions
+    conditions = MainContextMenuConditions(self.vcs_client, paths)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/util/contextmenu.py", line 1210, in __init__
+    self.generate_statuses(paths)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/util/contextmenu.py", line 1220, in generate_statuses
+    statuses_tmp = self.vcs_client.statuses(path)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/vcs/__init__.py", line 233, in statuses
+    client = self.client(path)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/vcs/__init__.py", line 212, in client
+    return self.git(guess["repo_path"], is_repo_path=False)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/vcs/__init__.py", line 138, in git
+    git.set_repository(repo_path)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/vcs/git/__init__.py", line 146, in set_repository
+    self.client.set_repository(path)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/vcs/git/gittyup/client.py", line 389, in set_repository
+    raise NotRepositoryError()
+NotRepositoryError
+None
+ERROR	rabbitvcs.services.checkerservice	org.freedesktop.DBus.Python.rabbitvcs.vcs.git.gittyup.exceptions.NotRepositoryError: Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/dbus/service.py", line 707, in _message_cb
+    retval = candidate_method(self, *args, **keywords)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/services/checkerservice.py", line 184, in GenerateMenuConditions
+    path_dict = self.status_checker.generate_menu_conditions(upaths)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/services/statuschecker.py", line 56, in generate_menu_conditions
+    conditions = MainContextMenuConditions(self.vcs_client, paths)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/util/contextmenu.py", line 1210, in __init__
+    self.generate_statuses(paths)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/util/contextmenu.py", line 1220, in generate_statuses
+    statuses_tmp = self.vcs_client.statuses(path)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/vcs/__init__.py", line 233, in statuses
+    client = self.client(path)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/vcs/__init__.py", line 212, in client
+    return self.git(guess["repo_path"], is_repo_path=False)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/vcs/__init__.py", line 138, in git
+    git.set_repository(repo_path)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/vcs/git/__init__.py", line 146, in set_repository
+    self.client.set_repository(path)
+  File "/usr/lib/python2.7/dist-packages/rabbitvcs/vcs/git/gittyup/client.py", line 389, in set_repository
+    raise NotRepositoryError()
+NotRepositoryError
+None

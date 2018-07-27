@@ -1,0 +1,25 @@
+#include "lane_detect_v2_sobel.h"
+
+
+//get roi data from source data
+static lane_detect_v2_getroi(land_detection_t* l,unsigned char* in)
+{
+	int sw = l -> src_width;
+	int sh = l -> src_height;
+	int rw = l -> roi_w;
+	int rh = l -> roi_h;
+	int lx = l -> roi_x;
+	int rx = l -> roi_x + l -> roi_w;
+	int ty = l -> roi_y;
+	int by = l -> roi_y + l -> roi_h;
+
+
+	for(int y = ty;y < by;y++)
+	{
+		for(int x = lx;x < rx;x++)
+		{
+			l -> roiImg.data[(y - ty) * rw + x - lx] = in[y * sw + x];		
+		}
+	}
+
+}
